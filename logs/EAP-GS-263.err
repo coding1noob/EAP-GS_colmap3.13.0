@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/data2/buaajianghengchen/storageCode/EAP-GS/run_colmap.py", line 216, in <module>
+    pipeline(scene, base_path=path, n_views=views, flag=augment)
+  File "/data2/buaajianghengchen/storageCode/EAP-GS/run_colmap.py", line 137, in pipeline
+    os.chdir(base_path + scene)
+FileNotFoundError: [Errno 2] No such file or directory: '/data2/buaajianghengchen/datasets/EAP-GS/fern'

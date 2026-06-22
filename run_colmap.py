@@ -134,7 +134,7 @@ def pipeline(scene, base_path, n_views, flag):
         view_path = str(n_views) + '_views_aug'
     else:
         view_path = str(n_views) + '_views'
-    os.chdir(base_path + scene)
+    os.chdir(os.path.join(base_path, scene))
     os.system('rm -r ' + view_path)
     os.mkdir(view_path)
     os.chdir(view_path)
@@ -172,9 +172,9 @@ def pipeline(scene, base_path, n_views, flag):
     with open('created/points3D.txt', "w") as fid:
         pass
 
-    res = os.popen('colmap feature_extractor --database_path database.db --image_path images  --SiftExtraction.max_image_size 4032 --SiftExtraction.max_num_features 32768 --SiftExtraction.estimate_affine_shape 1 --SiftExtraction.domain_size_pooling 1').read()
-    os.system('colmap exhaustive_matcher --database_path database.db --SiftMatching.guided_matching 1 --SiftMatching.max_num_matches 32768')
-    
+    res = os.popen('colmap feature_extractor --database_path database.db --image_path images --ImageReader.camera_model PINHOLE --SiftExtraction.max_image_size 4032 --SiftExtraction.max_num_features 32768 --SiftExtraction.estimate_affine_shape 1 --SiftExtraction.domain_size_pooling 1').read()
+    os.system('colmap exhaustive_matcher --database_path database.db --FeatureMatching.guided_matching 1 --FeatureMatching.max_num_matches 32768')
+
     db = COLMAPDatabase.connect('database.db')
     db_images = db.execute("SELECT * FROM images")
     img_rank = [db_image[1] for db_image in db_images]
@@ -202,15 +202,12 @@ def pipeline(scene, base_path, n_views, flag):
         os.system('cp sparse/points3D.bin' + f'  ../sparse/0/points3D_{n_views}views.bin')
 
 
-parser = argparse.ArgumentParser(description="parameters")
-parser.add_argument('--base_path', type=str, required=True, help="Path to the scene directory.")
-parser.add_argument('--views', type=int, default=3, help="The number of training views.")
-parser.add_argument("--augment", action="store_true")
-args = parser.parse_args()
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="parameters")
+    parser.add_argument('--base_path', type=str, required=True, help="Path to the scene directory.")
+    parser.add_argument('--views', type=int, default=3, help="The number of training views.")
+    parser.add_argument('--scene', type=str, required=True, help="Scene name to process.")
+    parser.add_argument("--augment", action="store_true")
+    args = parser.parse_args()
 
-path = args.base_path
-views = args.views
-augment = args.augment
-
-for scene in ['fern']:
-    pipeline(scene, base_path=path, n_views=views, flag=augment)
+    pipeline(scene=args.scene, base_path=args.base_path, n_views=args.views, flag=args.augment)

@@ -1,0 +1,495 @@
+I20260622 21:08:47.400044 135817125134336 misc.cc:44] 
+==============================================================================
+Feature extraction
+==============================================================================
+I20260622 21:08:47.459124 135815295614976 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.459221 135815287222272 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.459243 135815278829568 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.459261 135815270436864 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.459285 135815262044160 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.459304 135815253651456 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.459320 135815245258752 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.459338 135815236866048 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.459394 135815228473344 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.462166 135815220080640 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.462222 135815211687936 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.462242 135815203295232 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.462261 135814583414784 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.462279 135814575022080 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.462295 135814566629376 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.462316 135814558236672 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.462709 135814549843968 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.462733 135814541451264 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.462755 135814533058560 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.462776 135814524665856 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.462795 135814516273152 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.462811 135814499487744 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.465163 135814507880448 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.465713 135814491095040 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.465739 135814482702336 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.465762 135814474309632 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.465778 135814465916928 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.465803 135813576781824 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.465821 135813568389120 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.465841 135813559996416 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.465857 135813551603712 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.465878 135813543211008 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.465894 135813526425600 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.465914 135813442564096 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.466202 135813425778688 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.467166 135813408993280 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.467167 135813400600576 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.467394 135812637257728 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.468161 135813417385984 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.468183 135813534818304 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.468211 135813392207872 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.469161 135813434171392 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.469176 135812620472320 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.469220 135812612079616 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.469238 135812595294208 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.469261 135812586901504 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.469279 135812167495680 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.469162 135812628865024 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.470405 135812125532160 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.471163 135812603686912 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.472164 135812159102976 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.472169 135812150710272 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.472195 135811940990976 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.472198 135812142317568 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.472220 135811932598272 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.472231 135812133924864 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.472244 135812117139456 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.472247 135811924205568 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.472255 135811966169088 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.472266 135811957776384 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.474192 135811949383680 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.475166 135811915812864 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.475181 135810649137152 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.475210 135810691100672 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.475214 135810640744448 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.475243 135810682707968 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.475264 135810623959040 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.475271 135810674315264 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.475284 135810615566336 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.475289 135810665922560 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.475300 135810607173632 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.475167 135810657529856 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.476560 135810087120896 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.476584 135810078728192 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.477095 135810070335488 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.477115 135810061942784 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.477166 135810632351744 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.478163 135810598780928 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.478195 135810590388224 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.478221 135810581995520 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.478244 135810573602816 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.480120 135810045157376 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.480145 135810036764672 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.480168 135810053550080 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.480174 135809952903168 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.480206 135809944510464 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.480223 135809936117760 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.480239 135809927725056 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.480255 135809919332352 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.480274 135809910939648 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.480292 135809902546944 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.480311 135809684467712 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.480328 135809676075008 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.480348 135809667682304 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.482193 135809659289600 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.483160 135809516679168 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.483634 135809650896896 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.483663 135809642504192 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.483682 135809634111488 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.483702 135809550249984 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.483719 135809541857280 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.483738 135809533464576 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.483756 135809525071872 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.483778 135809508286464 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.483795 135809499893760 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.483812 135808744943616 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.483827 135808728158208 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.486049 135808736550912 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.486076 135807117545472 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.486094 135807109152768 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.486110 135807100760064 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.486124 135807092367360 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.486824 135808719765504 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.486849 135808711372800 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.486867 135808702980096 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.486886 135808694587392 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.486904 135807134330880 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.486920 135807125938176 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.486941 135806656176128 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.489163 135807083974656 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.489200 135806664568832 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.489763 135806647783424 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.489784 135806639390720 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.489810 135806630998016 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.489827 135806622605312 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.489849 135806614212608 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.489865 135806127697920 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.489885 135806119305216 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.489900 135806110912512 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.489917 135806102519808 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.489935 135806094127104 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.489956 135806077341696 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.489972 135805993480192 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.491161 135805976694784 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.492168 135806085734400 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.493161 135804936491008 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.493173 135805968302080 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.493162 135805985087488 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.493206 135805959909376 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.493226 135805951516672 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.493254 135805943123968 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.493271 135804986847232 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.493290 135804978454528 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.493309 135804970061824 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.493327 135804953276416 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.493345 135804944883712 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.494046 135804827451392 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.494068 135804819058688 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.494161 135804852629504 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.494276 135804844236800 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.495045 135804575801344 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.495162 135804961669120 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.496961 135803627884544 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.497161 135804835844096 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.497185 135804810665984 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.497202 135804802273280 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.497227 135804584194048 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.498162 135804567408640 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.498190 135804559015936 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.498207 135804550623232 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.498233 135804542230528 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.498255 135804533837824 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.498277 135803644669952 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.498294 135803636277248 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.499024 135803619491840 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.499047 135803602706432 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.499065 135803594313728 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.499082 135803174907904 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.499101 135803158122496 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.499118 135803149729792 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.500162 135803611099136 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.500188 135803166515200 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.501184 135802218598400 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.501486 135802185027584 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.502164 135803141337088 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.502166 135802210205696 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.502192 135803132944384 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.502213 135803124551680 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.502244 135802235383808 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.502260 135802226991104 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.502272 135802201812992 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.502300 135801950162944 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.503098 135801966948352 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.503119 135801958555648 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.503137 135801933377536 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.503157 135801924984832 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.503165 135802193420288 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.505164 135801941770240 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.506056 135801430077440 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.506077 135801421684736 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.506097 135801413292032 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.506116 135801404899328 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.506132 135801396506624 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.506158 135801388113920 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.506161 135801916592128 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.506177 135801379721216 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.506196 135800884813824 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.506205 135800876421120 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.506215 135800868028416 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.507194 135800893206528 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.508163 135800012398592 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.509167 135800859635712 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.509191 135800851243008 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.509212 135800842850304 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.509230 135800020791296 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.509249 135800004005888 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.509268 135799995613184 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:08:47.509287 135799987220480 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 21:09:37.130034 135799978827776 feature_extraction.cc:260] Processed file [1/12]
+I20260622 21:09:37.130109 135799978827776 feature_extraction.cc:263]   Name:            DSC08007.JPG
+I20260622 21:09:37.130113 135799978827776 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 21:09:37.130116 135799978827776 feature_extraction.cc:275]   Camera:          #4 - PINHOLE
+I20260622 21:09:37.130120 135799978827776 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 21:09:37.130134 135799978827776 feature_extraction.cc:282]   Features:        35112 (SIFT)
+I20260622 21:09:43.015802 135799978827776 feature_extraction.cc:260] Processed file [2/12]
+I20260622 21:09:43.015853 135799978827776 feature_extraction.cc:263]   Name:            DSC08139.JPG
+I20260622 21:09:43.015856 135799978827776 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 21:09:43.015859 135799978827776 feature_extraction.cc:275]   Camera:          #12 - PINHOLE
+I20260622 21:09:43.015863 135799978827776 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 21:09:43.015872 135799978827776 feature_extraction.cc:282]   Features:        34537 (SIFT)
+I20260622 21:09:43.659176 135799978827776 feature_extraction.cc:260] Processed file [3/12]
+I20260622 21:09:43.659220 135799978827776 feature_extraction.cc:263]   Name:            DSC08023.JPG
+I20260622 21:09:43.659225 135799978827776 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 21:09:43.659228 135799978827776 feature_extraction.cc:275]   Camera:          #5 - PINHOLE
+I20260622 21:09:43.659231 135799978827776 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 21:09:43.659242 135799978827776 feature_extraction.cc:282]   Features:        36724 (SIFT)
+I20260622 21:09:46.482170 135799978827776 feature_extraction.cc:260] Processed file [4/12]
+I20260622 21:09:46.482211 135799978827776 feature_extraction.cc:263]   Name:            DSC08056.JPG
+I20260622 21:09:46.482216 135799978827776 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 21:09:46.482219 135799978827776 feature_extraction.cc:275]   Camera:          #7 - PINHOLE
+I20260622 21:09:46.482222 135799978827776 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 21:09:46.482231 135799978827776 feature_extraction.cc:282]   Features:        35638 (SIFT)
+I20260622 21:09:46.542168 135799978827776 feature_extraction.cc:260] Processed file [5/12]
+I20260622 21:09:46.542199 135799978827776 feature_extraction.cc:263]   Name:            DSC08040.JPG
+I20260622 21:09:46.542203 135799978827776 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 21:09:46.542206 135799978827776 feature_extraction.cc:275]   Camera:          #6 - PINHOLE
+I20260622 21:09:46.542210 135799978827776 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 21:09:46.542219 135799978827776 feature_extraction.cc:282]   Features:        56130 (SIFT)
+I20260622 21:09:47.253076 135799978827776 feature_extraction.cc:260] Processed file [6/12]
+I20260622 21:09:47.253126 135799978827776 feature_extraction.cc:263]   Name:            DSC07957.JPG
+I20260622 21:09:47.253130 135799978827776 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 21:09:47.253133 135799978827776 feature_extraction.cc:275]   Camera:          #1 - PINHOLE
+I20260622 21:09:47.253147 135799978827776 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 21:09:47.253162 135799978827776 feature_extraction.cc:282]   Features:        37925 (SIFT)
+I20260622 21:09:49.038002 135799978827776 feature_extraction.cc:260] Processed file [7/12]
+I20260622 21:09:49.038037 135799978827776 feature_extraction.cc:263]   Name:            DSC08089.JPG
+I20260622 21:09:49.038041 135799978827776 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 21:09:49.038043 135799978827776 feature_extraction.cc:275]   Camera:          #9 - PINHOLE
+I20260622 21:09:49.038046 135799978827776 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 21:09:49.038056 135799978827776 feature_extraction.cc:282]   Features:        36752 (SIFT)
+I20260622 21:09:51.256031 135799978827776 feature_extraction.cc:260] Processed file [8/12]
+I20260622 21:09:51.256072 135799978827776 feature_extraction.cc:263]   Name:            DSC08122.JPG
+I20260622 21:09:51.256076 135799978827776 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 21:09:51.256079 135799978827776 feature_extraction.cc:275]   Camera:          #11 - PINHOLE
+I20260622 21:09:51.256081 135799978827776 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 21:09:51.256090 135799978827776 feature_extraction.cc:282]   Features:        43211 (SIFT)
+I20260622 21:09:51.309417 135799978827776 feature_extraction.cc:260] Processed file [9/12]
+I20260622 21:09:51.309440 135799978827776 feature_extraction.cc:263]   Name:            DSC07990.JPG
+I20260622 21:09:51.309442 135799978827776 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 21:09:51.309445 135799978827776 feature_extraction.cc:275]   Camera:          #3 - PINHOLE
+I20260622 21:09:51.309448 135799978827776 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 21:09:51.309455 135799978827776 feature_extraction.cc:282]   Features:        38947 (SIFT)
+I20260622 21:09:51.560367 135799978827776 feature_extraction.cc:260] Processed file [10/12]
+I20260622 21:09:51.560396 135799978827776 feature_extraction.cc:263]   Name:            DSC08106.JPG
+I20260622 21:09:51.560399 135799978827776 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 21:09:51.560401 135799978827776 feature_extraction.cc:275]   Camera:          #10 - PINHOLE
+I20260622 21:09:51.560404 135799978827776 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 21:09:51.560413 135799978827776 feature_extraction.cc:282]   Features:        56303 (SIFT)
+I20260622 21:09:53.738652 135799978827776 feature_extraction.cc:260] Processed file [11/12]
+I20260622 21:09:53.738687 135799978827776 feature_extraction.cc:263]   Name:            DSC07974.JPG
+I20260622 21:09:53.738690 135799978827776 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 21:09:53.738692 135799978827776 feature_extraction.cc:275]   Camera:          #2 - PINHOLE
+I20260622 21:09:53.738695 135799978827776 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 21:09:53.738704 135799978827776 feature_extraction.cc:282]   Features:        55385 (SIFT)
+I20260622 21:09:55.143448 135799978827776 feature_extraction.cc:260] Processed file [12/12]
+I20260622 21:09:55.143485 135799978827776 feature_extraction.cc:263]   Name:            DSC08073.JPG
+I20260622 21:09:55.143488 135799978827776 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 21:09:55.143492 135799978827776 feature_extraction.cc:275]   Camera:          #8 - PINHOLE
+I20260622 21:09:55.143495 135799978827776 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 21:09:55.143503 135799978827776 feature_extraction.cc:282]   Features:        59112 (SIFT)
+I20260622 21:09:55.164291 135817125134336 timer.cc:90] Elapsed time: 1.129 [minutes]
+I20260622 21:09:55.337752 124839916331008 misc.cc:44] 
+==============================================================================
+Feature matching & geometric verification
+==============================================================================
+I20260622 21:09:55.527878 124839907938304 feature_matching_utils.cc:78] Bind FeatureMatcherWorker to GPU device 0
+I20260622 21:09:55.527878 124837870964736 feature_matching_utils.cc:78] Bind FeatureMatcherWorker to GPU device 0
+I20260622 21:09:55.528050 124839907938304 sift.cc:1446] Creating SIFT GPU feature matcher
+I20260622 21:09:55.528051 124837870964736 sift.cc:1446] Creating SIFT GPU feature matcher
+I20260622 21:09:55.531668 124839916331008 pairing.cc:180] Generating exhaustive image pairs...
+I20260622 21:09:55.531694 124839916331008 pairing.cc:213] Processing block [1/1, 1/1]
+W20260622 21:09:55.546600 124839907938304 sift.cc:1422] Clamping features from 35112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.547325 124839907938304 sift.cc:1422] Clamping features from 34537 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.577718 124837870964736 sift.cc:1422] Clamping features from 35112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.577716 124839907938304 sift.cc:1422] Clamping features from 36724 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.579462 124837870964736 sift.cc:1422] Clamping features from 34537 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.601967 124839907938304 sift.cc:1422] Clamping features from 35638 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.607342 124837870964736 sift.cc:1422] Clamping features from 36724 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.636289 124839907938304 sift.cc:1422] Clamping features from 56130 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.638484 124837870964736 sift.cc:1422] Clamping features from 35638 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.662125 124839907938304 sift.cc:1422] Clamping features from 37925 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.686661 124839907938304 sift.cc:1422] Clamping features from 36752 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.688115 124837870964736 sift.cc:1422] Clamping features from 37925 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.711297 124839907938304 sift.cc:1422] Clamping features from 43211 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.712837 124837870964736 sift.cc:1422] Clamping features from 36752 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.732760 124839907938304 sift.cc:1422] Clamping features from 38947 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.739604 124837870964736 sift.cc:1422] Clamping features from 56130 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.767155 124839907938304 sift.cc:1422] Clamping features from 56303 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.768298 124837870964736 sift.cc:1422] Clamping features from 43211 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.795286 124839907938304 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.795841 124837870964736 sift.cc:1422] Clamping features from 38947 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.823697 124837870964736 sift.cc:1422] Clamping features from 56303 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.823695 124839907938304 sift.cc:1422] Clamping features from 59112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.832986 124837870964736 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.840079 124839907938304 sift.cc:1422] Clamping features from 34537 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.840891 124839907938304 sift.cc:1422] Clamping features from 36724 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.854726 124837870964736 sift.cc:1422] Clamping features from 59112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.870075 124839907938304 sift.cc:1422] Clamping features from 35638 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.885809 124839907938304 sift.cc:1422] Clamping features from 56130 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.897517 124837870964736 sift.cc:1422] Clamping features from 34537 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.913546 124837870964736 sift.cc:1422] Clamping features from 36724 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.913649 124839907938304 sift.cc:1422] Clamping features from 37925 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.929809 124839907938304 sift.cc:1422] Clamping features from 36752 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.942056 124837870964736 sift.cc:1422] Clamping features from 35638 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.957563 124839907938304 sift.cc:1422] Clamping features from 43211 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.969730 124837870964736 sift.cc:1422] Clamping features from 56130 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.985431 124839907938304 sift.cc:1422] Clamping features from 38947 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:55.998164 124837870964736 sift.cc:1422] Clamping features from 37925 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.013922 124839907938304 sift.cc:1422] Clamping features from 56303 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.026781 124837870964736 sift.cc:1422] Clamping features from 36752 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.040817 124839907938304 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.057006 124839907938304 sift.cc:1422] Clamping features from 59112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.071530 124837870964736 sift.cc:1422] Clamping features from 43211 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.086467 124839907938304 sift.cc:1422] Clamping features from 36724 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.087250 124839907938304 sift.cc:1422] Clamping features from 35638 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.100434 124837870964736 sift.cc:1422] Clamping features from 38947 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.114527 124839907938304 sift.cc:1422] Clamping features from 56130 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.138027 124839907938304 sift.cc:1422] Clamping features from 37925 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.142934 124837870964736 sift.cc:1422] Clamping features from 56303 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.158509 124839907938304 sift.cc:1422] Clamping features from 36752 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.171459 124837870964736 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.187006 124839907938304 sift.cc:1422] Clamping features from 43211 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.200289 124837870964736 sift.cc:1422] Clamping features from 59112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.214399 124839907938304 sift.cc:1422] Clamping features from 38947 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.230229 124839907938304 sift.cc:1422] Clamping features from 56303 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.242312 124837870964736 sift.cc:1422] Clamping features from 36724 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.257974 124837870964736 sift.cc:1422] Clamping features from 35638 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.258008 124839907938304 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.274125 124839907938304 sift.cc:1422] Clamping features from 59112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.288185 124837870964736 sift.cc:1422] Clamping features from 56130 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.303815 124839907938304 sift.cc:1422] Clamping features from 35638 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.316938 124839907938304 sift.cc:1422] Clamping features from 56130 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.317111 124837870964736 sift.cc:1422] Clamping features from 36752 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.333531 124839907938304 sift.cc:1422] Clamping features from 37925 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.346319 124837870964736 sift.cc:1422] Clamping features from 43211 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.360037 124839907938304 sift.cc:1422] Clamping features from 36752 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.376390 124839907938304 sift.cc:1422] Clamping features from 43211 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.387867 124837870964736 sift.cc:1422] Clamping features from 37925 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.403582 124839907938304 sift.cc:1422] Clamping features from 38947 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.416337 124837870964736 sift.cc:1422] Clamping features from 56303 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.432051 124839907938304 sift.cc:1422] Clamping features from 56303 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.443710 124837870964736 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.457763 124839907938304 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.473364 124839907938304 sift.cc:1422] Clamping features from 59112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.487233 124837870964736 sift.cc:1422] Clamping features from 59112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.502614 124839907938304 sift.cc:1422] Clamping features from 56130 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.504107 124839907938304 sift.cc:1422] Clamping features from 37925 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.517458 124837870964736 sift.cc:1422] Clamping features from 38947 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.532758 124839907938304 sift.cc:1422] Clamping features from 36752 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.544928 124837870964736 sift.cc:1422] Clamping features from 35638 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.560218 124839907938304 sift.cc:1422] Clamping features from 43211 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.560232 124837870964736 sift.cc:1422] Clamping features from 56130 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.576785 124839907938304 sift.cc:1422] Clamping features from 38947 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.590402 124837870964736 sift.cc:1422] Clamping features from 37925 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.605739 124839907938304 sift.cc:1422] Clamping features from 56303 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.619366 124837870964736 sift.cc:1422] Clamping features from 36752 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.634175 124839907938304 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.646646 124837870964736 sift.cc:1422] Clamping features from 43211 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.662476 124839907938304 sift.cc:1422] Clamping features from 59112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.675783 124837870964736 sift.cc:1422] Clamping features from 56303 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.690629 124839907938304 sift.cc:1422] Clamping features from 37925 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.691417 124839907938304 sift.cc:1422] Clamping features from 36752 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.703677 124837870964736 sift.cc:1422] Clamping features from 38947 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.719921 124839907938304 sift.cc:1422] Clamping features from 43211 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.733509 124837870964736 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.747101 124839907938304 sift.cc:1422] Clamping features from 38947 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.763272 124839907938304 sift.cc:1422] Clamping features from 56303 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.775352 124837870964736 sift.cc:1422] Clamping features from 59112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.791058 124839907938304 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.803203 124837870964736 sift.cc:1422] Clamping features from 56130 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.818830 124837870964736 sift.cc:1422] Clamping features from 37925 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.818919 124839907938304 sift.cc:1422] Clamping features from 59112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.821533 124837870964736 sift.cc:1422] Clamping features from 36752 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.836835 124839907938304 sift.cc:1422] Clamping features from 36752 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.837695 124839907938304 sift.cc:1422] Clamping features from 43211 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.851984 124837870964736 sift.cc:1422] Clamping features from 43211 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.866778 124839907938304 sift.cc:1422] Clamping features from 38947 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.879175 124837870964736 sift.cc:1422] Clamping features from 38947 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.893930 124839907938304 sift.cc:1422] Clamping features from 56303 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.918906 124839907938304 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.923534 124837870964736 sift.cc:1422] Clamping features from 56303 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.940762 124839907938304 sift.cc:1422] Clamping features from 59112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.953776 124837870964736 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.967857 124839907938304 sift.cc:1422] Clamping features from 43211 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.969579 124839907938304 sift.cc:1422] Clamping features from 38947 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.983144 124837870964736 sift.cc:1422] Clamping features from 59112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:56.996815 124839907938304 sift.cc:1422] Clamping features from 56303 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.012001 124839907938304 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.024752 124837870964736 sift.cc:1422] Clamping features from 37925 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.040852 124839907938304 sift.cc:1422] Clamping features from 59112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.040873 124837870964736 sift.cc:1422] Clamping features from 36752 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.056566 124839907938304 sift.cc:1422] Clamping features from 38947 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.069963 124837870964736 sift.cc:1422] Clamping features from 43211 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.070679 124839907938304 sift.cc:1422] Clamping features from 56303 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.086823 124839907938304 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.098726 124837870964736 sift.cc:1422] Clamping features from 56303 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.114175 124839907938304 sift.cc:1422] Clamping features from 59112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.127339 124837870964736 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.141395 124839907938304 sift.cc:1422] Clamping features from 56303 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.142995 124839907938304 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.143040 124837870964736 sift.cc:1422] Clamping features from 59112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.158923 124839907938304 sift.cc:1422] Clamping features from 59112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.171935 124837870964736 sift.cc:1422] Clamping features from 38947 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.186776 124839907938304 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.200641 124837870964736 sift.cc:1422] Clamping features from 36752 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.216335 124837870964736 sift.cc:1422] Clamping features from 43211 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.228732 124837870964736 sift.cc:1422] Clamping features from 38947 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.243562 124837870964736 sift.cc:1422] Clamping features from 56303 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.257641 124837870964736 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.269344 124837870964736 sift.cc:1422] Clamping features from 59112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.283516 124837870964736 sift.cc:1422] Clamping features from 43211 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.284479 124837870964736 sift.cc:1422] Clamping features from 38947 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.297588 124837870964736 sift.cc:1422] Clamping features from 56303 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.310536 124837870964736 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.311464 124837870964736 sift.cc:1422] Clamping features from 59112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.324224 124837870964736 sift.cc:1422] Clamping features from 38947 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.325177 124837870964736 sift.cc:1422] Clamping features from 56303 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.337710 124837870964736 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.338555 124837870964736 sift.cc:1422] Clamping features from 59112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.351836 124837870964736 sift.cc:1422] Clamping features from 56303 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.352885 124837870964736 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.353883 124837870964736 sift.cc:1422] Clamping features from 59112 to 32768 - consider increasing the maximum number of matches.
+W20260622 21:09:57.367506 124837870964736 sift.cc:1422] Clamping features from 55385 to 32768 - consider increasing the maximum number of matches.
+I20260622 21:09:57.380605 124839916331008 feature_matching.cc:117] in 1.849s
+I20260622 21:09:57.380648 124839916331008 timer.cc:90] Elapsed time: 0.034 [minutes]
+I20260622 21:09:57.638436 136748223971328 misc.cc:44] 
+==============================================================================
+Loading model
+==============================================================================
+I20260622 21:09:57.639951 136748223971328 incremental_pipeline.cc:264] Loading database
+I20260622 21:09:57.640699 136748223971328 database_cache.cc:67] Loading rigs...
+I20260622 21:09:57.640743 136748223971328 database_cache.cc:77]  12 in 0.000s
+I20260622 21:09:57.640750 136748223971328 database_cache.cc:85] Loading cameras...
+I20260622 21:09:57.640761 136748223971328 database_cache.cc:103]  12 in 0.000s
+I20260622 21:09:57.640764 136748223971328 database_cache.cc:111] Loading frames...
+I20260622 21:09:57.640794 136748223971328 database_cache.cc:126]  12 in 0.000s
+I20260622 21:09:57.640796 136748223971328 database_cache.cc:134] Loading matches...
+I20260622 21:09:57.641661 136748223971328 database_cache.cc:139]  59 in 0.001s
+I20260622 21:09:57.641674 136748223971328 database_cache.cc:155] Loading images...
+I20260622 21:09:57.666301 136748223971328 database_cache.cc:239]  12 in 0.025s (connected 12)
+I20260622 21:09:57.666328 136748223971328 database_cache.cc:250] Building correspondence graph...
+I20260622 21:09:57.692147 136748223971328 database_cache.cc:277]  in 0.026s (ignored 0)
+I20260622 21:09:57.692387 136748223971328 timer.cc:90] Elapsed time: 0.001 [minutes]
+E20260622 21:09:57.692402 136748223971328 reconstruction.cc:165] Check failed: existing_frame.RigId() == frame.RigId() 
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  [reconstruction.cc:165] Check failed: existing_frame.RigId() == frame.RigId() 
+*** Aborted at 1782133797 (unix time) try "date -d @1782133797" if you are using GNU date ***
+PC: @     0x7c5f9ec9eb2c pthread_kill
+*** SIGABRT (@0x3f1000206c3) received by PID 132803 (TID 0x7c5f2d504000) from PID 132803; stack trace: ***
+    @     0x7c5f9eca1ed3 (/usr/lib/x86_64-linux-gnu/libc.so.6+0xa1ed2)
+    @     0x7c5fa0dde917 google::(anonymous namespace)::FailureSignalHandler(int, siginfo*, void*)
+    @     0x7c5f9ec45330 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x4532f)
+    @     0x7c5f9ec9eb2c pthread_kill
+    @     0x7c5f9ec4527e gsignal
+    @     0x7c5f9ec288ff abort
+    @     0x7c5f9f0cef37 __gnu_cxx::__verbose_terminate_handler()
+    @     0x7c5f9f0cd519 __cxxabiv1::__terminate(void (*)())
+    @     0x7c5f9f0c7063 std::terminate()
+    @     0x7c5f9f0cd71c __cxa_throw
+    @     0x6110cad28929 colmap::LogMessageFatalThrow<std::invalid_argument>::~LogMessageFatalThrow()
+    @     0x6110cae39ecb colmap::Reconstruction::Load(colmap::DatabaseCache const&)
+    @     0x6110cae965ee colmap::IncrementalMapper::BeginReconstruction(std::shared_ptr<colmap::Reconstruction> const&)
+    @     0x6110cadaec0c colmap::IncrementalPipeline::TriangulateReconstruction(std::shared_ptr<colmap::Reconstruction> const&)
+    @     0x6110cad2f8aa colmap::RunPointTriangulatorImpl(std::shared_ptr<colmap::Reconstruction> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&,ØSX
+    @     0x6110cad30063 colmap::RunPointTriangulator(int, char**)
+    @     0x6110cad114f9 main
+    @     0x7c5f9ec2a1ca (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a1c9)
+    @     0x7c5f9ec2a28b __libc_start_main
+    @     0x6110cad17f64 (/data2/buaajianghengchen/conda_envs/EAP-GS/bin/colmap+0x12bf63)
+Aborted (core dumped)
+cp: cannot stat 'sparse/points3D.bin': No such file or directory

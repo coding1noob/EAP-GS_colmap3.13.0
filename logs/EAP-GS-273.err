@@ -1,0 +1,330 @@
+I20260622 18:03:51.845206 137246948687872 misc.cc:44] 
+==============================================================================
+Feature extraction
+==============================================================================
+I20260622 18:03:51.898051 137245125464064 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.898155 137245117071360 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.898178 137245108678656 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.898196 137245100285952 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.898211 137245091893248 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.898880 137244857847808 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.900038 137244866240512 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.900069 137244841062400 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.900113 137244832669696 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.900129 137244824276992 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.900154 137244606197760 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.901162 137244849455104 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.901165 137244874633216 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.903057 137244597805056 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.903086 137244589412352 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.903107 137244581019648 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.903124 137244572626944 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.903142 137244564234240 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.903164 137244555841536 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.903192 137244069326848 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.903211 137244060934144 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.903229 137244052541440 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.903247 137244044148736 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.903266 137244035756032 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.903283 137244027363328 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.903303 137244018970624 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.903319 137244010577920 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.904509 137243977007104 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.904563 137243968614400 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.905168 137243960221696 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.905191 137243951828992 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.906167 137244002185216 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.906198 137243993792512 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.906221 137243985399808 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.906240 137242928476160 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.906259 137242920083456 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.906275 137242911690752 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.906292 137242903298048 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.906309 137242894905344 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.909164 137242886512640 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.909202 137242878119936 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.909224 137242190278656 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.909241 137242181885952 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.909265 137242173493248 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.909283 137242165100544 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.909302 137242156707840 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.909319 137242148315136 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.909339 137242139922432 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.909363 137242056060928 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.909382 137242047668224 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.909400 137242039275520 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.909417 137242030882816 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.909433 137242022490112 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.910319 137241108144128 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.913174 137242014097408 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.913179 137241099751424 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.913226 137242005704704 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.913241 137241091358720 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.913253 137241116536832 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.913266 137241074573312 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.913254 137241082966016 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.913279 137241066180608 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.913291 137240915210240 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.913300 137240906817536 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.913312 137240898424832 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.913322 137240890032128 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.913330 137240881639424 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.913338 137240873246720 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.916154 137240638382080 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.916183 137240629989376 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.916205 137240621596672 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.917166 137240864854016 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.917200 137240780992512 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.917222 137240772599808 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.917251 137240764207104 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.917268 137240755814400 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.917287 137240747421696 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.917305 137240739028992 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.917327 137240730636288 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.917350 137240646774784 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.917824 137240504164352 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.919162 137240613203968 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.919186 137240604811264 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.919202 137240596418560 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.920163 137240495771648 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.920193 137240487378944 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.920221 137240478986240 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.920238 137240470593536 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.920262 137240462200832 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.920283 137240378339328 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.920300 137240369946624 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.920316 137240361553920 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.920337 137240353161216 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.920354 137240344768512 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.921178 137240512557056 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.923272 137240336375808 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.923296 137240327983104 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.923319 137240244121600 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.923339 137240235728896 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.923356 137240218943488 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.923378 137240210550784 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.923398 137240202158080 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.923418 137240193765376 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.923434 137240109903872 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.923452 137240101511168 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.923466 137240093118464 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.923486 137240084725760 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.924164 137240227336192 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.926370 137240076333056 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.926392 137240067940352 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.926413 137240059547648 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.926429 137239967293440 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.926450 137239958900736 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.926466 137239950508032 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.926488 137239942115328 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.926505 137239933722624 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.926522 137239925329920 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.926541 137239841468416 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.926558 137239833075712 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.926578 137239824683008 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.926607 137239816290304 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.927162 137239975686144 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.929704 137239807897600 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.929730 137239799504896 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.929754 137239707250688 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.929771 137239698857984 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.929789 137239690465280 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.929805 137239682072576 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.929826 137239673679872 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.929842 137239665287168 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.929862 137239656894464 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.929877 137239573032960 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.929897 137239564640256 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.929915 137239556247552 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.929932 137239547854848 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.930168 137239791112192 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.930465 137239531069440 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.931389 137239287812096 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.932163 137239522676736 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.932189 137239304597504 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.932216 137239296204800 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.933163 137239539462144 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.934121 137239279419392 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.934146 137239271026688 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.934174 137239262633984 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.934186 137234313363456 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.934193 137239254241280 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.934211 137234338541568 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.934230 137234330148864 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.934248 137234321756160 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.934268 137234304970752 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.934284 137234296578048 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.934304 137234288185344 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.934319 137234137214976 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.936164 137234128822272 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.937162 137234120429568 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.937185 137234112036864 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.937207 137234103644160 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.937222 137234095251456 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.937241 137234086858752 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.937265 137233331908608 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.937285 137233323515904 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.937302 137233315123200 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.937326 137233298337792 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.937341 137233289945088 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.937357 137233281552384 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.937372 137233130582016 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.939164 137233306730496 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.939891 137232291704832 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.940190 137232308490240 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.941164 137233122189312 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.941190 137233113796608 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.941213 137233105403904 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.941232 137233097011200 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.941254 137233088618496 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.941272 137233080225792 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.941294 137232325275648 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.941313 137232316882944 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.941331 137232300097536 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.942089 137232283312128 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.942114 137231989731328 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.942134 137231981338624 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.942158 137231972945920 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.942177 137231956160512 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.942193 137231947767808 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.942210 137231939375104 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.942218 137232274919424 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.944161 137231964553216 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.945162 137231318642688 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.945186 137231310249984 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.945204 137231301857280 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.945237 137231293464576 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.945254 137231285071872 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.945278 137231276679168 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.945296 137231268286464 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.945317 137230781771776 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.945334 137230764986368 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.945355 137230756593664 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.945371 137230748200960 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.945390 137230739808256 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.946948 137229749960704 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.946991 137229741568000 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.947167 137230773379072 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.949166 137230731415552 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.949202 137229775138816 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.949225 137229766746112 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.949247 137229758353408 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:03:51.950166 137229733175296 sift.cc:716] Creating Covariant SIFT CPU feature extractor
+I20260622 18:04:45.739198 137229724782592 feature_extraction.cc:260] Processed file [1/12]
+I20260622 18:04:45.739266 137229724782592 feature_extraction.cc:263]   Name:            DSC08007.JPG
+I20260622 18:04:45.739271 137229724782592 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 18:04:45.739274 137229724782592 feature_extraction.cc:275]   Camera:          #4 - SIMPLE_RADIAL
+I20260622 18:04:45.739279 137229724782592 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 18:04:45.739291 137229724782592 feature_extraction.cc:282]   Features:        35112 (SIFT)
+I20260622 18:04:48.687974 137229724782592 feature_extraction.cc:260] Processed file [2/12]
+I20260622 18:04:48.688023 137229724782592 feature_extraction.cc:263]   Name:            DSC07957.JPG
+I20260622 18:04:48.688027 137229724782592 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 18:04:48.688029 137229724782592 feature_extraction.cc:275]   Camera:          #1 - SIMPLE_RADIAL
+I20260622 18:04:48.688034 137229724782592 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 18:04:48.688042 137229724782592 feature_extraction.cc:282]   Features:        37925 (SIFT)
+I20260622 18:04:50.980172 137229724782592 feature_extraction.cc:260] Processed file [3/12]
+I20260622 18:04:50.980219 137229724782592 feature_extraction.cc:263]   Name:            DSC08056.JPG
+I20260622 18:04:50.980224 137229724782592 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 18:04:50.980227 137229724782592 feature_extraction.cc:275]   Camera:          #7 - SIMPLE_RADIAL
+I20260622 18:04:50.980231 137229724782592 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 18:04:50.980239 137229724782592 feature_extraction.cc:282]   Features:        35638 (SIFT)
+I20260622 18:04:51.669332 137229724782592 feature_extraction.cc:260] Processed file [4/12]
+I20260622 18:04:51.669383 137229724782592 feature_extraction.cc:263]   Name:            DSC07990.JPG
+I20260622 18:04:51.669387 137229724782592 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 18:04:51.669390 137229724782592 feature_extraction.cc:275]   Camera:          #3 - SIMPLE_RADIAL
+I20260622 18:04:51.669393 137229724782592 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 18:04:51.669402 137229724782592 feature_extraction.cc:282]   Features:        38947 (SIFT)
+I20260622 18:04:52.632448 137229724782592 feature_extraction.cc:260] Processed file [5/12]
+I20260622 18:04:52.632495 137229724782592 feature_extraction.cc:263]   Name:            DSC07974.JPG
+I20260622 18:04:52.632499 137229724782592 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 18:04:52.632502 137229724782592 feature_extraction.cc:275]   Camera:          #2 - SIMPLE_RADIAL
+I20260622 18:04:52.632505 137229724782592 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 18:04:52.632514 137229724782592 feature_extraction.cc:282]   Features:        55385 (SIFT)
+I20260622 18:04:52.693134 137229724782592 feature_extraction.cc:260] Processed file [6/12]
+I20260622 18:04:52.693168 137229724782592 feature_extraction.cc:263]   Name:            DSC08139.JPG
+I20260622 18:04:52.693172 137229724782592 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 18:04:52.693175 137229724782592 feature_extraction.cc:275]   Camera:          #12 - SIMPLE_RADIAL
+I20260622 18:04:52.693185 137229724782592 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 18:04:52.693192 137229724782592 feature_extraction.cc:282]   Features:        34537 (SIFT)
+I20260622 18:04:54.416050 137229724782592 feature_extraction.cc:260] Processed file [7/12]
+I20260622 18:04:54.416080 137229724782592 feature_extraction.cc:263]   Name:            DSC08089.JPG
+I20260622 18:04:54.416083 137229724782592 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 18:04:54.416085 137229724782592 feature_extraction.cc:275]   Camera:          #9 - SIMPLE_RADIAL
+I20260622 18:04:54.416088 137229724782592 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 18:04:54.416094 137229724782592 feature_extraction.cc:282]   Features:        36752 (SIFT)
+I20260622 18:04:54.665448 137229724782592 feature_extraction.cc:260] Processed file [8/12]
+I20260622 18:04:54.665483 137229724782592 feature_extraction.cc:263]   Name:            DSC08023.JPG
+I20260622 18:04:54.665486 137229724782592 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 18:04:54.665488 137229724782592 feature_extraction.cc:275]   Camera:          #5 - SIMPLE_RADIAL
+I20260622 18:04:54.665491 137229724782592 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 18:04:54.665498 137229724782592 feature_extraction.cc:282]   Features:        36724 (SIFT)
+I20260622 18:04:55.219640 137229724782592 feature_extraction.cc:260] Processed file [9/12]
+I20260622 18:04:55.219676 137229724782592 feature_extraction.cc:263]   Name:            DSC08040.JPG
+I20260622 18:04:55.219678 137229724782592 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 18:04:55.219680 137229724782592 feature_extraction.cc:275]   Camera:          #6 - SIMPLE_RADIAL
+I20260622 18:04:55.219685 137229724782592 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 18:04:55.219692 137229724782592 feature_extraction.cc:282]   Features:        56130 (SIFT)
+I20260622 18:04:56.562325 137229724782592 feature_extraction.cc:260] Processed file [10/12]
+I20260622 18:04:56.562365 137229724782592 feature_extraction.cc:263]   Name:            DSC08073.JPG
+I20260622 18:04:56.562371 137229724782592 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 18:04:56.562373 137229724782592 feature_extraction.cc:275]   Camera:          #8 - SIMPLE_RADIAL
+I20260622 18:04:56.562376 137229724782592 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 18:04:56.562384 137229724782592 feature_extraction.cc:282]   Features:        59112 (SIFT)
+I20260622 18:04:57.101495 137229724782592 feature_extraction.cc:260] Processed file [11/12]
+I20260622 18:04:57.101523 137229724782592 feature_extraction.cc:263]   Name:            DSC08122.JPG
+I20260622 18:04:57.101526 137229724782592 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 18:04:57.101528 137229724782592 feature_extraction.cc:275]   Camera:          #11 - SIMPLE_RADIAL
+I20260622 18:04:57.101531 137229724782592 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 18:04:57.101539 137229724782592 feature_extraction.cc:282]   Features:        43211 (SIFT)
+I20260622 18:05:02.364934 137229724782592 feature_extraction.cc:260] Processed file [12/12]
+I20260622 18:05:02.364976 137229724782592 feature_extraction.cc:263]   Name:            DSC08106.JPG
+I20260622 18:05:02.364979 137229724782592 feature_extraction.cc:272]   Dimensions:      5187 x 3361
+I20260622 18:05:02.364982 137229724782592 feature_extraction.cc:275]   Camera:          #10 - SIMPLE_RADIAL
+I20260622 18:05:02.364985 137229724782592 feature_extraction.cc:278]   Focal Length:    6224.40px
+I20260622 18:05:02.364995 137229724782592 feature_extraction.cc:282]   Features:        56303 (SIFT)
+I20260622 18:05:02.384199 137246948687872 timer.cc:90] Elapsed time: 1.176 [minutes]
+E20260622 18:05:02.529540 136477620060160 option_manager.cc:976] Failed to parse options - unrecognised option '--SiftMatching.guided_matching'.
+I20260622 18:05:02.657622 129540352393216 misc.cc:44] 
+==============================================================================
+Loading model
+==============================================================================
+I20260622 18:05:02.659121 129540352393216 incremental_pipeline.cc:264] Loading database
+I20260622 18:05:02.659854 129540352393216 database_cache.cc:67] Loading rigs...
+I20260622 18:05:02.659898 129540352393216 database_cache.cc:77]  12 in 0.000s
+I20260622 18:05:02.659903 129540352393216 database_cache.cc:85] Loading cameras...
+I20260622 18:05:02.659915 129540352393216 database_cache.cc:103]  12 in 0.000s
+I20260622 18:05:02.659917 129540352393216 database_cache.cc:111] Loading frames...
+I20260622 18:05:02.659947 129540352393216 database_cache.cc:126]  12 in 0.000s
+I20260622 18:05:02.659950 129540352393216 database_cache.cc:134] Loading matches...
+I20260622 18:05:02.659956 129540352393216 database_cache.cc:139]  0 in 0.000s
+I20260622 18:05:02.659958 129540352393216 database_cache.cc:155] Loading images...
+I20260622 18:05:02.659977 129540352393216 database_cache.cc:239]  12 in 0.000s (connected 0)
+I20260622 18:05:02.659980 129540352393216 database_cache.cc:250] Building correspondence graph...
+I20260622 18:05:02.659983 129540352393216 database_cache.cc:277]  in 0.000s (ignored 0)
+I20260622 18:05:02.660076 129540352393216 timer.cc:90] Elapsed time: 0.000 [minutes]
+W20260622 18:05:02.660082 129540352393216 incremental_pipeline.cc:288] No images with matches found in the database
+E20260622 18:05:02.660087 129540352393216 incremental_pipeline.cc:623] Check failed: LoadDatabase() 
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  [incremental_pipeline.cc:623] Check failed: LoadDatabase() 
+*** Aborted at 1782122702 (unix time) try "date -d @1782122702" if you are using GNU date ***
+PC: @     0x75d16829eb2c pthread_kill
+*** SIGABRT (@0x3f1003eca10) received by PID 4114960 (TID 0x75d0f6b04000) from PID 4114960; stack trace: ***
+    @     0x75d1682a1ed3 (/usr/lib/x86_64-linux-gnu/libc.so.6+0xa1ed2)
+    @     0x75d16aefc917 google::(anonymous namespace)::FailureSignalHandler(int, siginfo*, void*)
+    @     0x75d168245330 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x4532f)
+    @     0x75d16829eb2c pthread_kill
+    @     0x75d16824527e gsignal
+    @     0x75d1682288ff abort
+    @     0x75d1686cef37 __gnu_cxx::__verbose_terminate_handler()
+    @     0x75d1686cd519 __cxxabiv1::__terminate(void (*)())
+    @     0x75d1686c7063 std::terminate()
+    @     0x75d1686cd71c __cxa_throw
+    @     0x601bc479b7f6 colmap::IncrementalPipeline::TriangulateReconstruction(std::shared_ptr<colmap::Reconstruction> const&) [clone .cold]
+    @     0x601bc485f8aa colmap::RunPointTriangulatorImpl(std::shared_ptr<colmap::Reconstruction> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&,ØSX
+    @     0x601bc4860063 colmap::RunPointTriangulator(int, char**)
+    @     0x601bc48414f9 main
+    @     0x75d16822a1ca (/usr/lib/x86_64-linux-gnu/libc.so.6+0x2a1c9)
+    @     0x75d16822a28b __libc_start_main
+    @     0x601bc4847f64 (/data2/buaajianghengchen/conda_envs/EAP-GS/bin/colmap+0x12bf63)
+Aborted (core dumped)
+cp: cannot stat 'sparse/points3D.bin': No such file or directory
