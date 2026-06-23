@@ -128,37 +128,55 @@ def round_python3(number):
         return 2.0 * round(number / 2.0)
     return rounded
 
+# n_views表示The number of training views.
 def pipeline(scene, base_path, n_views, flag):
     llffhold = 8
     if flag:
         view_path = str(n_views) + '_views_aug'
     else:
-        view_path = str(n_views) + '_views'
-    os.chdir(os.path.join(base_path, scene))
+        view_path = str(n_views) + '_views'     # 12_views
+    os.chdir(os.path.join(base_path, scene))    # chdir = cd
     os.system('rm -r ' + view_path)
     os.mkdir(view_path)
     os.chdir(view_path)
     os.mkdir('created')
     os.mkdir('sparse')
     os.mkdir('images')
+    # 将原本文件夹下的sparse/0中的 .bin -> .txt
     os.system('colmap model_converter  --input_path ../sparse/0/ --output_path ../sparse/0/  --output_type TXT')
 
+    # ================ 读 images.txt，把每张图像的位姿/相机信息按文件名存到 images 字典里 ================
+    # images.txt 里每张图片通常占 两行，第一行：图像 id，四元数旋转 qvec，平移 tvec，相机 id，图像文件名
+    # 第二行：这张图上所有 2D 特征点及其关联 3D 点
     images = {}
     with open('../sparse/0/images.txt', "r") as fid:
         while True:
             line = fid.readline()
-            if not line:
+            if not line:    # 如果 readline() 返回空字符串 ""，长度是 0，说明读完了，跳出循环
                 break
-            line = line.strip()
+            line = line.strip() # 去掉这一行首尾的空白字符，"1 0.9 ... image001.png\n"变成"1 0.9 ... image001.png"
+            # 跳过：空行，以 # 开头的注释行
             if len(line) > 0 and line[0] != "#":
+                # 按空白符把这一行拆成列表，比如一行是：1 0.99 IMG_0001.JPG，
+                # 那么 elems 会变成 ["1" "0.99" "IMG_0001.JPG"]
                 elems = line.split()
+                # elems[0] = IMAGE_ID
+                # elems[1:5] = QW,QX,QY,QZ
+                # elems[5:8] = TX,TY,TZ
+                # elems[8] = CAMERA_ID
+                # elems[9] = NAME
                 image_name = elems[9]
-                fid.readline().split()
-                images[image_name] = elems[1:]
+                fid.readline().split()  # 把当前图像后面的“第二行特征点信息”读掉，但并不使用
+                images[image_name] = elems[1:]  # 保存：images["IMG_0001.JPG"] = [QW, QX, QY, QZ, TX, TY, TZ, CAMERA_ID, NAME]
 
+    # 拿出所有图片名，按元素本身排序，放进 img_list列表，结果是：["000001.png", "000002.png", "000003.png"]
+    # sorted(..., key=...) 的意思是：排序前，先对每个元素应用 key 函数，再按函数结果排序。这里 lambda 表示匿名函数，等同于 def f(x): return x
     img_list = sorted(images.keys(), key=lambda x: x)
+    # enumerate 会给列表里的每个元素编号，遍历 img_list 中每张图，如果它的下标 idx 不是 llffhold 的倍数，就保留下来。idx 表示下标，c 表示元素本身
     train_img_list = [c for idx, c in enumerate(img_list) if idx % llffhold != 0]
-    if n_views > 0:
+    if n_views > 0:     # n_views 为 3 or 12
+        # np.linspace(a, b, n) 指：在区间 [a, b] 上均匀取 n 个点。这里相当于在训练集中均匀相隔，共取12张图片，并用 round_python3 四舍五入
+        # idx_sub 就是 要保留的训练图像 train_img_list 的下标集合
         idx_sub = [round_python3(i) for i in np.linspace(0, len(train_img_list)-1, n_views)]
         train_img_list = [c for idx, c in enumerate(train_img_list) if idx in idx_sub]
 
@@ -167,23 +185,32 @@ def pipeline(scene, base_path, n_views, flag):
     else:
         for img_name in train_img_list:
             os.system('cp ../images/' + img_name + '  images/' + img_name)
-
+    
+    # 把原 sparse 里的 cameras.txt 复制到12_views/created/cameras.txt
     os.system('cp ../sparse/0/cameras.txt created/.')
+    # 创建空文件 created/points3D.txt ，之后给定相机参数和图像，重新让 COLMAP 在 few-shot 图像上三角化出新的点云
     with open('created/points3D.txt', "w") as fid:
         pass
 
-    res = os.popen('colmap feature_extractor --database_path database.db --image_path images --ImageReader.camera_model PINHOLE --SiftExtraction.max_image_size 4032 --SiftExtraction.max_num_features 32768 --SiftExtraction.estimate_affine_shape 1 --SiftExtraction.domain_size_pooling 1').read()
-    os.system('colmap exhaustive_matcher --database_path database.db --FeatureMatching.guided_matching 1 --FeatureMatching.max_num_matches 32768')
-
-    db = COLMAPDatabase.connect('database.db')
-    db_images = db.execute("SELECT * FROM images")
-    img_rank = [db_image[1] for db_image in db_images]
+    # 这里是对12_views/images进行特征提取和匹配，结果都写进 .db 中
+    # res = os.popen('colmap feature_extractor --database_path database.db --image_path images --ImageReader.camera_model PINHOLE --SiftExtraction.max_image_size 4032 --SiftExtraction.max_num_features 32768 --SiftExtraction.estimate_affine_shape 1 --SiftExtraction.domain_size_pooling 1').read()
+    # os.system('colmap exhaustive_matcher --database_path database.db --FeatureMatching.guided_matching 1 --FeatureMatching.max_num_matches 32768')
+    res = os.popen('colmap feature_extractor --database_path database.db --image_path images  --SiftExtraction.max_image_size 4032 --SiftExtraction.max_num_features 32768 --SiftExtraction.estimate_affine_shape 1 --SiftExtraction.domain_size_pooling 1').read()
+    os.system('colmap exhaustive_matcher --database_path database.db --SiftMatching.guided_matching 1 --FeatureMatching.max_num_matches 32768')
+    
+    # ====== 读取刚刚生成的 COLMAP 数据库 database.db 中的 images 表，取出数据库里记录的图像名顺序 ======
+    db = COLMAPDatabase.connect('database.db')  # 连接当前目录下的 SQLite 数据库文件 database.db，返回一个数据库连接对象 db
+    db_images = db.execute("SELECT * FROM images")  # 从数据库的 images 表里，把所有记录查出来
+    # 遍历查询结果里的每一行 db_image，取第 2 列 db_image[1]，组成一个列表
+    # 把数据库中的所有图像名按数据库返回顺序取出来，例如得到：
+    # img_rank = ["IMG_0003.JPG", "IMG_0012.JPG", "IMG_0007.JPG", ...]
+    img_rank = [db_image[1] for db_image in db_images]  
     print(img_rank, res)
-
     with open('created/images.txt', "w") as fid:
         for idx, img_name in enumerate(img_rank):
             print(img_name)
-            img_name = os.path.basename(img_name)
+            img_name = os.path.basename(img_name)   # 只保留文件名，不保留路径："images/IMG_0005.JPG" -> "IMG_0005.JPG"
+            # 所以 flag=True 的本质：增强图沿用原图位姿，但名字换成增强图文件名
             if flag:
                 aug_name = img_name.replace('_aug', '') if '_aug' in img_name else img_name
                 data = [str(1 + idx)] + [' ' + item for item in images[aug_name]] + ['\n\n']
@@ -191,6 +218,18 @@ def pipeline(scene, base_path, n_views, flag):
                     data = [line.replace(aug_name, img_name) for line in data]
                 fid.writelines(data)
             else:
+                # 拼一行 images.txt 的内容，'\n\n'表示images.txt中一张图一般对应两行
+                # 假设当前：
+                # idx = 0, img_name = "IMG_0005.JPG"
+                # 且：
+                # images[img_name] = [
+                #     "0.99", "0.01", "0.02", "0.03",
+                #     "1.0", "2.0", "3.0",
+                #     "1",
+                #     "IMG_0005.JPG"
+                # ]
+                # 写出去后，文件里这一段就会变成：
+                # 1 0.99 0.01 0.02 0.03 1.0 2.0 3.0 1 IMG_0005.JPG
                 data = [str(1 + idx)] + [' ' + item for item in images[img_name]] + ['\n\n']
                 fid.writelines(data)
 
@@ -201,6 +240,7 @@ def pipeline(scene, base_path, n_views, flag):
     else:
         os.system('cp sparse/points3D.bin' + f'  ../sparse/0/points3D_{n_views}views.bin')
 
+    # 总结：created文件夹下 cameras.txt 是复制的 原sparse 里面的
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="parameters")
