@@ -131,6 +131,7 @@ def round_python3(number):
 # n_views表示The number of training views.
 def pipeline(scene, base_path, n_views, flag):
     llffhold = 8
+    # 如果是增强后跑此脚本，就是用12_views_aug
     if flag:
         view_path = str(n_views) + '_views_aug'
     else:
@@ -181,6 +182,7 @@ def pipeline(scene, base_path, n_views, flag):
         train_img_list = [c for idx, c in enumerate(train_img_list) if idx in idx_sub]
 
     if flag:
+        # 把 garden/augimages/ 里的所有图复制到 garden/12_views_aug/images/
         os.system('cp ../augimages/*  images/')
     else:
         for img_name in train_img_list:
@@ -192,8 +194,9 @@ def pipeline(scene, base_path, n_views, flag):
     with open('created/points3D.txt', "w") as fid:
         pass
 
-    # 这里是对12_views/images进行特征提取和匹配，结果都写进 .db 中
+    # ============= 这里是对12_views/images进行特征提取和匹配，结果都写进 .db 中 =============
     # 使用更接近旧版 COLMAP 3.8 的接口参数
+    # 这里已经在 12_views/ 下了，所以 images指的是 12_views/images里面的
     res = os.popen('colmap feature_extractor --database_path database.db --image_path images --ImageReader.camera_model PINHOLE --SiftExtraction.max_image_size 4032 --SiftExtraction.max_num_features 32768 --SiftExtraction.estimate_affine_shape 0 --SiftExtraction.domain_size_pooling 0').read()
     os.system('colmap exhaustive_matcher --database_path database.db --SiftMatching.guided_matching 1 --SiftMatching.max_num_matches 32768')
     
@@ -231,7 +234,7 @@ def pipeline(scene, base_path, n_views, flag):
                 # 1 0.99 0.01 0.02 0.03 1.0 2.0 3.0 1 IMG_0005.JPG
                 data = [str(1 + idx)] + [' ' + item for item in images[img_name]] + ['\n\n']
                 fid.writelines(data)
-
+    # 在相机位姿已知的前提下，用 database.db 里的特征和匹配，把 12_views/images 这批图重新三角化、BA，生成新的 sparse 重建结果
     os.system('colmap point_triangulator --database_path database.db --image_path images --input_path created  --output_path sparse  --Mapper.ba_local_max_num_iterations 40 --Mapper.ba_local_max_refinements 3 --Mapper.ba_global_max_num_iterations 100')
 
     if flag:
@@ -239,7 +242,7 @@ def pipeline(scene, base_path, n_views, flag):
     else:
         os.system('cp sparse/points3D.bin' + f'  ../sparse/0/points3D_{n_views}views.bin')
 
-    # 总结：created文件夹下 cameras.txt 是复制的 原sparse 里面的
+    # 总结：created文件夹下 cameras.txt 是复制的 原sparse里面的，images.txt 由 原sparse拼接而成，points3D.bin 由 三角化直接得出
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="parameters")

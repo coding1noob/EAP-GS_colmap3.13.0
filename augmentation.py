@@ -1,3 +1,6 @@
+# 不是读取 12_views/ 里的相机子集来做增强。它读取的是场景根目录 sparse/0/images.bin 和 cameras.bin 的全量相机信息，
+# 然后用 split_index.json 只筛出训练视图，再把你指定的 few-shot 点云（例如 points3D_12views.bin）投影上去做增强
+
 import numpy as np
 from sklearn.cluster import DBSCAN
 from skimage.draw import disk
@@ -20,18 +23,26 @@ parser.add_argument('--radius', type=int, default=20, help="The radius of region
 args = parser.parse_args()
 
 path = args.source_path
+# DBSCAN 的参数，含义是：两个投影点之间，最多相距多少像素时，才认为它们彼此“邻近”、可能属于同一个簇
+# 点A(100, 200)，点B(110, 215)，如果它们之间距离小于 eps，DBSCAN 就倾向于认为：这两个点属于同一片投影区域
 eps = args.eps
+# DBSCAN 的参数，含义是：一个点周围至少要有多少个邻近点，DBSCAN 才把它当成“核心点”并形成一个有效簇（不希望因为几个零散噪声点就形成一个簇）
 min_samples = args.min_samples
+# 对每个属于已覆盖簇的投影点，在图像上画多大的一个圆盘区域
+# 假设某个投影点落在像素 (x=300, y=200)，如果：radius = 20，那么代码会把这个点周围半径 20 像素的圆盘全部涂掉
 radius = args.radius
 name = args.pc_name
 
 
+# 只有当前图像下标 idx 属于训练集时，才做增强图生成
 with open(os.path.join(path, "split_index.json"), "r") as jf:
     jsonf = json.load(jf)
     train_idx, test_idx = jsonf["train"], jsonf["test"]
 
-
+# 实际读的是：/.../garden/sparse/0/points3D_12views.bin
+# xyz：每个 3D 点的空间坐标 (x, y, z); rgb：每个 3D 点的颜色 (r, g, b); err：每个 3D 点的重投影误差
 xyz, rgb, err = read_points3D_binary(os.path.join(path, f"sparse/0/{name}.bin"))
+# 如果读出来的 err 存在，就直接用它；如果没有误差数据，就给每个点补一个全 1 的默认误差
 xyzerr = err if err is not None else np.ones((xyz.shape[0], 1))
 
 cameras_extrinsic_file = os.path.join(path, "sparse/0", "images.bin")
@@ -39,27 +50,41 @@ cameras_intrinsic_file = os.path.join(path, "sparse/0", "cameras.bin")
 cam_extrinsics = read_extrinsics_binary(cameras_extrinsic_file)
 cam_intrinsics = read_intrinsics_binary(cameras_intrinsic_file)
 
-
+# 定义一个 结构化数组，'f4'：float32，'u1'：uint8
 dtype = [('x', 'f4'), ('y', 'f4'), ('z', 'f4'), ('nx', 'f4'), ('ny', 'f4'), ('nz', 'f4'),
          ('red', 'u1'), ('green', 'u1'), ('blue', 'u1'), ('xyzerr', 'f4')]
 normals = np.zeros_like(xyz)
+# 创建一个长度为 xyz.shape[0] 的结构化数组，但内容先不初始化
 elements = np.empty(xyz.shape[0], dtype=dtype)
+# 把坐标、法向量、颜色、误差按列拼接起来。每一行就会变成：
+# [x, y, z, nx, ny, nz, red, green, blue, xyzerr]
 attributes = np.concatenate((xyz, normals, rgb, xyzerr), axis=1)
+# 把 attributes 的每一行都转成 tuple
 elements[:] = list(map(tuple, attributes))
 
+# 把 elements 这份结构化数组描述成一个 PLY 格式里的 vertex 元素
 vertex_element = PlyElement.describe(elements, 'vertex')
+# 用这个 vertex 元素构造一个 PLY 数据对象
 ply_data = PlyData([vertex_element])
 
 vertices = ply_data['vertex']
+# 从顶点表里取出 x,y,z 三列，拼成 (N,3) 的坐标数组
 positions = np.vstack([vertices['x'], vertices['y'], vertices['z']]).T if 'x' in vertices else None
+# 从顶点表里取出 RGB 三列，拼成 (N,3) 颜色数组，并从 0~255 归一化到 0~1
 colors = np.vstack([vertices['red'], vertices['green'], vertices['blue']]).T / 255.0 if 'red' in vertices else None
+# 取出法向量字段，拼成 (N,3) 的法向量数组，不过目前还是全0
 normals = np.vstack([vertices['nx'], vertices['ny'], vertices['nz']]).T if 'nx' in vertices else None
+# 取出每个点的误差，最小误差点大约归一化成 1，其他点会变成更大的值，把误差变成一个相对尺度
 errors = vertices['xyzerr'] / (np.min(vertices['xyzerr'] + 1e-8)) if 'xyzerr' in vertices else None
 
+# 用刚才整理好的坐标、颜色、法向量、误差，创建一个项目内部的点云对象 pcd
 pcd = BasicPointCloud(points=positions, colors=colors, normals=normals, errors=errors)
 
+# sorted 对 cam_extrinsics 这个字典的 key 进行排序，排序依据是每个 key 对应的图像对象的 .name 字段
+# 排序完 idx 就和 split_index.json 里的 train_idx 对齐了
 for idx, key in enumerate(sorted(cam_extrinsics, key=lambda x: cam_extrinsics[x].name)):
 
+    # 终端打印当前处理到第几张相机，\r 表示回车到行首，覆盖同一行输出，flush() 强制立即显示
     sys.stdout.write(f'\rReading camera {idx+1}/{len(cam_extrinsics)}')
     sys.stdout.flush()
 
@@ -67,53 +92,74 @@ for idx, key in enumerate(sorted(cam_extrinsics, key=lambda x: cam_extrinsics[x]
     intr = cam_intrinsics[extr.camera_id]
     height, width = intr.height, intr.width
 
+    # extr.qvec 是 COLMAP 保存的四元数旋转表示(colmap_loader.py可看)，
+    # qvec2rotmat(...) 把四元数转成旋转矩阵
     R = np.transpose(qvec2rotmat(extr.qvec))
     T = np.array(extr.tvec)
 
+    # 取焦距并构造视场角
     focal_length_x = intr.params[0]
     focal_length_y = intr.params[1] if intr.model == "PINHOLE" else intr.params[0]
+    # 这里的 FovX/FovY 在这段代码里后面其实没用到
     FovY = focal2fov(focal_length_y, height)
     FovX = focal2fov(focal_length_x, width)
 
+    # 构造相机内参矩阵 K，默认主点在图像中心
     K = np.array([[focal_length_x, 0, width / 2], [0, focal_length_y, height / 2], [0, 0, 1]])
 
     image_path = os.path.join(path, "images")
     image = Image.open(os.path.join(image_path, os.path.basename(extr.name)))
 
+    # 准备增强图输出目录
     augimage_path = os.path.join(path, "augimages")
     os.makedirs(augimage_path, exist_ok=True)
 
+    # pcd 存在 并且 当前这张图的排序序号 idx 在训练集索引里，才继续做增强
     if pcd and idx in train_idx:
+        # 先保存一份原图到 augimages/
         image.save(os.path.join(augimage_path, extr.name))
 
-        depthmap = np.zeros((height, width))
+        depthmap = np.zeros((height, width))    # 创建空深度图
+        # 把点云投影到当前相机
         cam_coord = np.matmul(K, np.matmul(R.transpose(), pcd.points.transpose()) + T.reshape(3, 1))
+        # 过滤掉不可见点。cam_coord[2]表示深度 > 0：点在相机前方，不在背后；其余约束 表示要求 投影后落在图像范围内的点
         valid_idx = np.where(np.logical_and.reduce((cam_coord[2] > 0, cam_coord[0] / cam_coord[2] >= 0,
                                                      cam_coord[0] / cam_coord[2] <= width - 1, 
                                                      cam_coord[1] / cam_coord[2] >= 0, 
                                                      cam_coord[1] / cam_coord[2] <= height - 1)))   [0]
-        pts_depths = cam_coord[-1:, valid_idx]
+        pts_depths = cam_coord[-1:, valid_idx]  # 取这些点的深度，-1表示最后一行，等于 cam_coord[2, valid_idx]
+        # 此时 cam_coord 表示：每个可见 3D 点投到图像上的 2D 位置
         cam_coord = cam_coord[:2, valid_idx] / cam_coord[-1:, valid_idx]
+        # 把投影点写进深度图
         depthmap[np.round(cam_coord[1]).astype(np.int32).clip(0, height - 1),
                  np.round(cam_coord[0]).astype(np.int32).clip(0, width - 1)] = pts_depths
 
+        # 取所有非零像素坐标，也就是：当前图像里“被 coarse 点云覆盖到的像素位置”
         indices = np.array(np.nonzero(depthmap)).transpose()
         if indices.shape[0] == 0:
-            labels = []
+            # 如果没有任何投影点，直接令 labels = []
+            labels = []     
         else:
+            # 否则做 DBSCAN 聚类
             labels = DBSCAN(eps=eps, min_samples=min_samples).fit(indices).labels_
+        # DBSCAN 会把噪声点标成 -1，这里统计除去噪声后的簇数
         num_clusters = len(set(labels)) - (1 if -1 in labels else 0)
 
+        # 初始化 mask 为全 1，即整张图都为保留
         mask = np.ones((height, width), dtype=np.uint8)
+        # 遍历每个聚类
         for cluster_id in range(num_clusters):
             cluster_points = indices[labels == cluster_id]
+            # 如果簇分空，遍历簇内每个点
             if cluster_points.size > 0:
                 for point in cluster_points:
                     x, y = int(point[1]), int(point[0])
                     rr, cc = disk((y, x), radius, shape=mask.shape)
                     mask[rr, cc] = 0
 
+        # 用 mask 过滤原图
         img = np.array(image) * mask[:, :, np.newaxis]
 
+        # 生成增强图文件名并保存
         name, ext = os.path.splitext(extr.name)
         Image.fromarray(img.astype(np.uint8)).save(os.path.join(augimage_path, f"{name}_aug{ext}"))
