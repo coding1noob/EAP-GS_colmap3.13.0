@@ -25,7 +25,7 @@ nvidia-smi || true
 
 source ~/.bashrc
 source /home/buaajianghengchen/anaconda3/etc/profile.d/conda.sh
-conda activate /data2/buaajianghengchen/conda_envs/EAP-GS
+conda activate /data2/buaajianghengchen/conda_envs/colmap37
 
 echo "==== Paths ===="
 echo "SCENE_ROOT=${SCENE_ROOT}"
@@ -51,7 +51,7 @@ colmap feature_extractor \
 echo "==== 2. Running COLMAP exhaustive_matcher ===="
 colmap exhaustive_matcher \
     --database_path "${DB_PATH}" \
-    --FeatureMatching.use_gpu 1
+    --SiftMatching.use_gpu 1
 
 echo "==== 3. Running COLMAP mapper ===="
 colmap mapper \

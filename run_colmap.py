@@ -193,10 +193,9 @@ def pipeline(scene, base_path, n_views, flag):
         pass
 
     # 这里是对12_views/images进行特征提取和匹配，结果都写进 .db 中
-    # res = os.popen('colmap feature_extractor --database_path database.db --image_path images --ImageReader.camera_model PINHOLE --SiftExtraction.max_image_size 4032 --SiftExtraction.max_num_features 32768 --SiftExtraction.estimate_affine_shape 1 --SiftExtraction.domain_size_pooling 1').read()
-    # os.system('colmap exhaustive_matcher --database_path database.db --FeatureMatching.guided_matching 1 --FeatureMatching.max_num_matches 32768')
-    res = os.popen('colmap feature_extractor --database_path database.db --image_path images  --SiftExtraction.max_image_size 4032 --SiftExtraction.max_num_features 32768 --SiftExtraction.estimate_affine_shape 1 --SiftExtraction.domain_size_pooling 1').read()
-    os.system('colmap exhaustive_matcher --database_path database.db --SiftMatching.guided_matching 1 --FeatureMatching.max_num_matches 32768')
+    # 使用更接近旧版 COLMAP 3.8 的接口参数
+    res = os.popen('colmap feature_extractor --database_path database.db --image_path images --ImageReader.camera_model PINHOLE --SiftExtraction.max_image_size 4032 --SiftExtraction.max_num_features 32768 --SiftExtraction.estimate_affine_shape 0 --SiftExtraction.domain_size_pooling 0').read()
+    os.system('colmap exhaustive_matcher --database_path database.db --SiftMatching.guided_matching 1 --SiftMatching.max_num_matches 32768')
     
     # ====== 读取刚刚生成的 COLMAP 数据库 database.db 中的 images 表，取出数据库里记录的图像名顺序 ======
     db = COLMAPDatabase.connect('database.db')  # 连接当前目录下的 SQLite 数据库文件 database.db，返回一个数据库连接对象 db

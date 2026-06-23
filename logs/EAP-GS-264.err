@@ -1,8 +1,0 @@
-rm: cannot remove '12_views': No such file or directory
-sh: 1: colmap: not found
-Traceback (most recent call last):
-  File "/data2/buaajianghengchen/storageCode/EAP-GS/run_colmap.py", line 213, in <module>
-    pipeline(scene=args.scene, base_path=args.base_path, n_views=args.views, flag=args.augment)
-  File "/data2/buaajianghengchen/storageCode/EAP-GS/run_colmap.py", line 147, in pipeline
-    with open('../sparse/0/images.txt', "r") as fid:
-FileNotFoundError: [Errno 2] No such file or directory: '../sparse/0/images.txt'
