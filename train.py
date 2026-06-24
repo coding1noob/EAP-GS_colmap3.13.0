@@ -17,13 +17,15 @@ import cv2
 import numpy as np
 import torch
 import torchvision
+from PIL import Image
 from argparse import ArgumentParser, Namespace
 from arguments import ModelParams, PipelineParams, OptimizationParams
 from scene import Scene, GaussianModel
+from scene.dataset_readers import fetchPly
 from gaussian_renderer import render, network_gui
 
 from utils.loss_utils import l1_loss, l2_loss, nearMean_map, ssim
-from utils.image_utils import psnr, normalize_depth, depth_colorize_with_mask
+from utils.image_utils import psnr, normalize_depth, depth_colorize_with_mask, draw_pcd_on_image
 from utils.general_utils import safe_state
 from lpipsPyTorch import lpips
 
@@ -139,7 +141,8 @@ def training(dataset, opt, pipe, testing_iterations, saving_iterations, checkpoi
 
             # Log and save
             training_report(tb_writer, iteration, Ll1, loss, l1_loss, iter_start.elapsed_time(iter_end), testing_iterations, scene, render,
-                            (pipe, background, True), txt_path=os.path.join(args.model_path, "metric.txt"))
+                            (pipe, background, True), txt_path=os.path.join(args.model_path, "metric.txt"),
+                            visualize_points=pipe.visualize_points, points_shrink=pipe.points_shrink)
             if (iteration in saving_iterations):
                 print("\n[ITER {}] Saving Gaussians".format(iteration))
                 scene.save(iteration)
@@ -188,7 +191,7 @@ def prepare_output_and_logger(args):
         print("Tensorboard not available: not logging progress")
     return tb_writer
 
-def training_report(tb_writer, iteration, Ll1, loss, l1_loss, elapsed, testing_iterations, scene : Scene, renderFunc, renderArgs, txt_path=None):
+def training_report(tb_writer, iteration, Ll1, loss, l1_loss, elapsed, testing_iterations, scene : Scene, renderFunc, renderArgs, txt_path=None, visualize_points=False, points_shrink=1024):
     if tb_writer:
         tb_writer.add_scalar('train_loss_patches/l1_loss', Ll1.item(), iteration)
         tb_writer.add_scalar('train_loss_patches/total_loss', loss.item(), iteration)
@@ -197,7 +200,13 @@ def training_report(tb_writer, iteration, Ll1, loss, l1_loss, elapsed, testing_i
     # Report test and samples of training set
     if iteration in testing_iterations:
         torch.cuda.empty_cache()
-        validation_configs = ({'name': 'test', 'cameras' : scene.getTestCameras()}, 
+        init_xyz = None
+        if visualize_points:
+            ply_path = os.path.join(scene.model_path, "input.ply")
+            if os.path.exists(ply_path):
+                init_xyz = torch.tensor(fetchPly(ply_path).points, dtype=torch.float32, device="cuda")
+
+        validation_configs = ({'name': 'test', 'cameras' : scene.getTestCameras()},
                               {'name': 'train', 'cameras' : scene.getTrainCameras()[:2]})
 
         for config in validation_configs:
@@ -215,22 +224,34 @@ def training_report(tb_writer, iteration, Ll1, loss, l1_loss, elapsed, testing_i
                         if iteration == testing_iterations[0]:
                             tb_writer.add_images(config['name'] + "_view_{}/ground_truth".format(viewpoint.image_name), gt_image[None], global_step=iteration)
 
-                    if txt_path is not None: 
-                        elements = txt_path.split("\\")
-                        elements = elements[:-1]
-                        render_path = os.path.join(*elements,f"render_{iteration:05d}")
-                        os.makedirs(render_path, exist_ok=True)
+                    if txt_path is not None:
+                        render_root = os.path.dirname(txt_path)
+                        iter_tag = f"{iteration:05d}"
+                        renders_dir = os.path.join(render_root, f"renders_{iter_tag}")
+                        gt_dir = os.path.join(render_root, f"gt_{iter_tag}")
+                        depth_dir = os.path.join(render_root, f"depth_{iter_tag}")
+                        mark_dir = os.path.join(render_root, f"with_mark_{iter_tag}")
+                        os.makedirs(renders_dir, exist_ok=True)
+                        os.makedirs(gt_dir, exist_ok=True)
+                        os.makedirs(depth_dir, exist_ok=True)
+                        if visualize_points and init_xyz is not None:
+                            os.makedirs(mark_dir, exist_ok=True)
 
-                        # RGB
-                        render_image_path = os.path.join(render_path, f"{config['name']}_{idx:03d}_render.png")
-                        gt_image_path = os.path.join(render_path, f"{config['name']}_{idx:03d}_gt.png")
+                        image_name = f"{config['name']}_{idx:03d}.png"
+
+                        render_image_path = os.path.join(renders_dir, image_name)
+                        gt_image_path = os.path.join(gt_dir, image_name)
                         torchvision.utils.save_image(image, render_image_path)
                         torchvision.utils.save_image(gt_image, gt_image_path)
 
-                        # depth.
-                        depth_path = os.path.join(render_path, f"{config['name']}_{idx:03d}_depth.png")
-                        depth = ((depth_colorize_with_mask(depth.cpu().numpy()[None])).squeeze() * 255.0).astype(np.uint8)
-                        cv2.imwrite(depth_path, depth[:,:,::-1])
+                        depth_path = os.path.join(depth_dir, image_name)
+                        depth_image = ((depth_colorize_with_mask(depth.cpu().numpy()[None])).squeeze() * 255.0).astype(np.uint8)
+                        cv2.imwrite(depth_path, depth_image[:,:,::-1])
+
+                        if visualize_points and init_xyz is not None:
+                            mark_image = Image.open(render_image_path).convert("RGB")
+                            mark_image = draw_pcd_on_image(mark_image, viewpoint, init_xyz, points_shrink)
+                            mark_image.save(os.path.join(mark_dir, image_name))
                     l1_test += l1_loss(image, gt_image).mean().double()
                     psnr_test += psnr(image, gt_image).mean().double()
                     ssim_test += ssim(image, gt_image).mean().double()
@@ -238,7 +259,7 @@ def training_report(tb_writer, iteration, Ll1, loss, l1_loss, elapsed, testing_i
                 psnr_test /= len(config['cameras'])
                 ssim_test /= len(config['cameras'])
                 lpips_test /= len(config['cameras'])
-                l1_test /= len(config['cameras'])          
+                l1_test /= len(config['cameras'])
                 print(f"[ITER {iteration}] Evaluating {config['name']}: L1 {l1_test:.6f} PSNR {psnr_test:.2f}")# SSIM {ssim_test:.4f} LPIPS {lpips_test:.4f}")
                 if config['name'] == 'test':
                     with open(txt_path,"a") as fp:

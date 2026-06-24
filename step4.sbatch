@@ -23,9 +23,10 @@ source /home/buaajianghengchen/anaconda3/etc/profile.d/conda.sh
 conda activate /data2/buaajianghengchen/conda_envs/EAP-GS
 
 python train.py \
-  -s /data2/buaajianghengchen/datasets/EAP-GS/garden \
-  --model_path /data2/buaajianghengchen/datasets/EAP-GS/garden/output \
-  -r 4 \
+  -s /data2/buaajianghengchen/datasets/EAP-GS/buaa1 \
+  --model_path /data2/buaajianghengchen/storageCode/EAP-GS/output \
   --seed 3 \
-  --pc_name points3D_12views_aug \
-  --eval
+  --pc_name points3D_600views_aug \
+  --eval \
+  --visualize_points \
+  --points_shrink 1024

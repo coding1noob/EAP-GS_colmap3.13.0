@@ -24,6 +24,6 @@ conda activate /data2/buaajianghengchen/conda_envs/colmap37
 
 python run_colmap.py \
   --base_path /data2/buaajianghengchen/datasets/EAP-GS \
-  --scene garden \
-  --views 12 \
+  --scene buaa1 \
+  --views 600 \
   --augment

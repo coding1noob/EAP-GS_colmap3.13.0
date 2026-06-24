@@ -15,6 +15,7 @@ import torch.nn.functional as F
 import torch.nn as nn
 import numpy as np
 import matplotlib
+from PIL import ImageDraw
 pca_mean = None
 top_vector = None
 
@@ -42,6 +43,31 @@ def gradient_map(image):
     magnitude = magnitude.norm(dim=0, keepdim=True)
 
     return magnitude
+
+
+def draw_pcd_on_image(pil_img, view, xyz, points_shrink, color=(255, 0, 0)):
+    height, width = pil_img.height, pil_img.width
+    half_len = max(1, height // points_shrink)
+
+    p_hom = torch.cat([xyz, torch.ones(xyz.shape[0], 1, device=xyz.device)], dim=1)
+    p_proj = p_hom @ view.full_proj_transform
+
+    valid_z = p_proj[:, 2] > 0.01
+    p_ndc = p_proj[:, :2] / (p_proj[:, 3:4] + 1e-8)
+    px = (p_ndc[:, 0] + 1) * width / 2
+    py = (p_ndc[:, 1] + 1) * height / 2
+
+    margin = half_len
+    valid = valid_z & (px >= -margin) & (px < width + margin) & (py >= -margin) & (py < height + margin)
+    px = px[valid].detach().cpu().numpy()
+    py = py[valid].detach().cpu().numpy()
+
+    draw = ImageDraw.Draw(pil_img)
+    for x, y in zip(px, py):
+        draw.line([x - half_len, y, x + half_len, y], fill=color, width=1)
+        draw.line([x, y - half_len, x, y + half_len], fill=color, width=1)
+    return pil_img
+
 
 def depth_to_normal(depth_map, camera):
     # Unproject depth map to obtain 3D points

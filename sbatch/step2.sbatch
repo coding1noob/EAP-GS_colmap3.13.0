@@ -23,5 +23,5 @@ source /home/buaajianghengchen/anaconda3/etc/profile.d/conda.sh
 conda activate /data2/buaajianghengchen/conda_envs/EAP-GS
 
 python augmentation.py \
-  --source_path /data2/buaajianghengchen/datasets/EAP-GS/buaa1 \
-  --pc_name points3D_600views
+  --source_path /data2/buaajianghengchen/datasets/EAP-GS/garden \
+  --pc_name points3D_12views

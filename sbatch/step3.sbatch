@@ -1,12 +1,12 @@
 #!/bin/bash
-#SBATCH -J step2
+#SBATCH -J step3
 #SBATCH -p gpu
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
 #SBATCH --time=04:00:00
-#SBATCH -o /data2/buaajianghengchen/storageCode/EAP-GS/logs/step2-%j.out
-#SBATCH -e /data2/buaajianghengchen/storageCode/EAP-GS/logs/step2-%j.err
+#SBATCH -o /data2/buaajianghengchen/storageCode/EAP-GS/logs/step3-%j.out
+#SBATCH -e /data2/buaajianghengchen/storageCode/EAP-GS/logs/step3-%j.err
 
 set -euo pipefail
 
@@ -20,8 +20,10 @@ nvidia-smi || true
 
 source ~/.bashrc
 source /home/buaajianghengchen/anaconda3/etc/profile.d/conda.sh
-conda activate /data2/buaajianghengchen/conda_envs/EAP-GS
+conda activate /data2/buaajianghengchen/conda_envs/colmap37
 
-python augmentation.py \
-  --source_path /data2/buaajianghengchen/datasets/EAP-GS/buaa1 \
-  --pc_name points3D_600views
+python run_colmap.py \
+  --base_path /data2/buaajianghengchen/datasets/EAP-GS \
+  --scene garden \
+  --views 12 \
+  --augment

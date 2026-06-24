@@ -1,12 +1,12 @@
 #!/bin/bash
-#SBATCH -J step2
+#SBATCH -J step4
 #SBATCH -p gpu
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
-#SBATCH --mem=32G
-#SBATCH --time=04:00:00
-#SBATCH -o /data2/buaajianghengchen/storageCode/EAP-GS/logs/step2-%j.out
-#SBATCH -e /data2/buaajianghengchen/storageCode/EAP-GS/logs/step2-%j.err
+#SBATCH --mem=64G
+#SBATCH --time=24:00:00
+#SBATCH -o /data2/buaajianghengchen/storageCode/EAP-GS/logs/step4-%j.out
+#SBATCH -e /data2/buaajianghengchen/storageCode/EAP-GS/logs/step4-%j.err
 
 set -euo pipefail
 
@@ -22,6 +22,10 @@ source ~/.bashrc
 source /home/buaajianghengchen/anaconda3/etc/profile.d/conda.sh
 conda activate /data2/buaajianghengchen/conda_envs/EAP-GS
 
-python augmentation.py \
-  --source_path /data2/buaajianghengchen/datasets/EAP-GS/buaa1 \
-  --pc_name points3D_600views
+python train.py \
+  -s /data2/buaajianghengchen/datasets/EAP-GS/garden \
+  --model_path /data2/buaajianghengchen/datasets/EAP-GS/garden/output \
+  -r 4 \
+  --seed 3 \
+  --pc_name points3D_12views_aug \
+  --eval

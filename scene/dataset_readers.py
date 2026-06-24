@@ -370,9 +370,17 @@ def pick_idx_from_360(path, train_idx, kshot, center, num_trials=100_000):
 
 def readColmapSceneInfo(path, images, eval, kshot=1000, seed=0, white_background=False, pc_name='points3D', Depthoptim=True):
     ## load split_idx.json
-    with open(os.path.join(path, "split_index.json"), "r") as jf:
-        jsonf = json.load(jf)
-        train_idx, test_idx = jsonf["train"], jsonf["test"]
+    split_path = os.path.join(path, "split_index.json")
+    if os.path.exists(split_path):
+        with open(split_path, "r") as jf:
+            jsonf = json.load(jf)
+            train_idx, test_idx = jsonf["train"], jsonf["test"]
+    else:
+        cameras_extrinsic_file = os.path.join(path, "sparse/0", "images.bin")
+        cam_extrinsics = read_extrinsics_binary(cameras_extrinsic_file)
+        num_images = len(cam_extrinsics)
+        train_idx = [idx for idx in range(num_images) if idx % 8 != 0]
+        test_idx = [idx for idx in range(num_images) if idx % 8 == 0]
 
     reading_dir = "images" if images == None else images
     mask_dir = os.path.join(path, "mask")

@@ -33,22 +33,28 @@ min_samples = args.min_samples
 radius = args.radius
 name = args.pc_name
 
+llffhold = 8
+cameras_extrinsic_file = os.path.join(path, "sparse/0", "images.bin")
+cameras_intrinsic_file = os.path.join(path, "sparse/0", "cameras.bin")
+cam_extrinsics = read_extrinsics_binary(cameras_extrinsic_file)
+cam_intrinsics = read_intrinsics_binary(cameras_intrinsic_file)
 
-# 只有当前图像下标 idx 属于训练集时，才做增强图生成
-with open(os.path.join(path, "split_index.json"), "r") as jf:
-    jsonf = json.load(jf)
-    train_idx, test_idx = jsonf["train"], jsonf["test"]
+split_path = os.path.join(path, "split_index.json")
+if os.path.exists(split_path):
+    # 只有当前图像下标 idx 属于训练集时，才做增强图生成
+    with open(split_path, "r") as jf:
+        jsonf = json.load(jf)
+        train_idx, test_idx = jsonf["train"], jsonf["test"]
+else:
+    num_images = len(cam_extrinsics)
+    test_idx = [idx for idx in range(num_images) if idx % llffhold == 0]
+    train_idx = [idx for idx in range(num_images) if idx % llffhold != 0]
 
 # 实际读的是：/.../garden/sparse/0/points3D_12views.bin
 # xyz：每个 3D 点的空间坐标 (x, y, z); rgb：每个 3D 点的颜色 (r, g, b); err：每个 3D 点的重投影误差
 xyz, rgb, err = read_points3D_binary(os.path.join(path, f"sparse/0/{name}.bin"))
 # 如果读出来的 err 存在，就直接用它；如果没有误差数据，就给每个点补一个全 1 的默认误差
 xyzerr = err if err is not None else np.ones((xyz.shape[0], 1))
-
-cameras_extrinsic_file = os.path.join(path, "sparse/0", "images.bin")
-cameras_intrinsic_file = os.path.join(path, "sparse/0", "cameras.bin")
-cam_extrinsics = read_extrinsics_binary(cameras_extrinsic_file)
-cam_intrinsics = read_intrinsics_binary(cameras_intrinsic_file)
 
 # 定义一个 结构化数组，'f4'：float32，'u1'：uint8
 dtype = [('x', 'f4'), ('y', 'f4'), ('z', 'f4'), ('nx', 'f4'), ('ny', 'f4'), ('nz', 'f4'),

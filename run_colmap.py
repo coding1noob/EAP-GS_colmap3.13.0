@@ -176,9 +176,12 @@ def pipeline(scene, base_path, n_views, flag):
     # enumerate 会给列表里的每个元素编号，遍历 img_list 中每张图，如果它的下标 idx 不是 llffhold 的倍数，就保留下来。idx 表示下标，c 表示元素本身
     train_img_list = [c for idx, c in enumerate(img_list) if idx % llffhold != 0]
     if n_views > 0:     # n_views 为 3 or 12
-        # np.linspace(a, b, n) 指：在区间 [a, b] 上均匀取 n 个点。这里相当于在训练集中均匀相隔，共取12张图片，并用 round_python3 四舍五入
-        # idx_sub 就是 要保留的训练图像 train_img_list 的下标集合
-        idx_sub = [round_python3(i) for i in np.linspace(0, len(train_img_list)-1, n_views)]
+        if n_views >= len(train_img_list):
+            idx_sub = list(range(len(train_img_list)))
+        else:
+            # np.linspace(a, b, n) 指：在区间 [a, b] 上均匀取 n 个点。这里相当于在训练集中均匀相隔，共取12张图片，并用 round_python3 四舍五入
+            # idx_sub 就是 要保留的训练图像 train_img_list 的下标集合
+            idx_sub = sorted(set(round_python3(i) for i in np.linspace(0, len(train_img_list)-1, n_views)))
         train_img_list = [c for idx, c in enumerate(train_img_list) if idx in idx_sub]
 
     if flag:
